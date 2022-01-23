@@ -1,4 +1,5 @@
 import random
+
 class card_generator:
     # generates a card to be used at call point, returns INT
     def __init__(self):
@@ -44,14 +45,19 @@ class game_master:
         if self.playerchoice == None:
             print(f'Card 1: {card_1}')
         else:
-            print(f'Card 2: {card_2}')
+            print(f'\nCard 2: {card_2}')
 
 
     def get_inputs(self):
         #gets user inputs
-        choice = input('Will the next card be [HI] or [LOW]: ').upper()
-        self.playerchoice = choice
-        print('check')
+        while True:
+            choice = input('Will the next card be [HI] or [LOW]: ').upper()
+            
+            if choice == 'HI' or choice == 'LOW':
+                self.playerchoice = choice
+                break
+            else:
+                print('Invalid input...')
 
     def do_updates(self):
         #analyzes score using player input
@@ -80,8 +86,8 @@ class game_master:
     def do_result(self):
         #calculate results and see if game is over
         self.cards = []
-        if self.score < 0:
-            print('You are out of points!')
+        if self.score < 1:
+            print('\nGAME OVER!\nYou are out of points!')
             self.is_playing = False
             return
         
@@ -89,9 +95,10 @@ class game_master:
         if choice == 'N' or choice == 'NO':
             self.is_playing = False
             return
-        else:
+        elif choice == 'Y' or choice == 'YES':
             return
+        else:
+            print('invalid input...')
 
 program_status = game_master()
 program_status.start_game()
-#game_master.start_game(program_status)
