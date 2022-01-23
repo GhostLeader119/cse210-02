@@ -39,4 +39,4 @@ root                    (project root folder)
 
 ## Authors
 ---
-* 
+* Craig Conover
