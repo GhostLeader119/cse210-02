@@ -21,6 +21,7 @@ class game_master:
         self.playerchoice = None
 
     def draw_cards(self):
+        #draws the cards set to be used for the round, calls card_generator class
         for i in range(2):
             card_gen = card_generator()
             card = card_gen.draw()
@@ -28,7 +29,7 @@ class game_master:
             self.cards.append(card)
     
     def start_game(self):
-        #central control function
+        #central control function/switchboard
         while self.is_playing:
             self.draw_cards()
             self.display_card()
@@ -71,6 +72,7 @@ class game_master:
         else:
             analyze = 'the same'
 
+        #determines points
         translation = self.playerchoice
         if analyze == translation:
             print('You guessed correct!')
@@ -85,8 +87,9 @@ class game_master:
 
     def do_result(self):
         #calculate results and see if game is over
-        self.cards = []
+        self.cards = [] # resets cards for next round if necesary
         if self.score < 1:
+            #ends game if points run out
             print('\nGAME OVER!\nYou are out of points!')
             self.is_playing = False
             return
