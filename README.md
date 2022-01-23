@@ -39,4 +39,4 @@ root                    (project root folder)
 
 ## Authors
 ---
-* 
+* Caden, Sam, Craig and Kira
