@@ -39,4 +39,8 @@ root                    (project root folder)
 
 ## Authors
 ---
+<<<<<< patch-1
+* Caden, Sam, Craig and Kira
+=======
 * Craig Conover
+>>>>>>> main
