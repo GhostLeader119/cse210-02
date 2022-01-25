@@ -30,6 +30,11 @@ class game_master:
     
     def start_game(self):
         #central control function/switchboard
+        print('******** Welcome to Hilo ********')
+        print('It is a fun game of chance. You will be given a card with a number value and your mission is to guess if the next card will be higher or lower in number.\n\nYou will start off with 300 points.\n   - Guess right you earn 100 points.\n   - Guess wrong you loose 75 points.')
+        print('\nHappy Guessing!!\n')
+        print('*****************************')
+
         while self.is_playing:
             self.draw_cards()
             self.display_card()
@@ -44,6 +49,7 @@ class game_master:
         card_2 = self.cards[1]
 
         if self.playerchoice == None:
+            
             print(f'Card 1: {card_1}')
         else:
             print(f'\nCard 2: {card_2}')
@@ -52,7 +58,7 @@ class game_master:
     def get_inputs(self):
         #gets user inputs
         while True:
-            choice = input('Will the next card be [HI] or [LOW]: ').upper()
+            choice = input('Take a guess. Will the next card be [HI] or [LOW]: ').upper()
             
             if choice == 'HI' or choice == 'LOW':
                 self.playerchoice = choice
@@ -75,10 +81,10 @@ class game_master:
         #determines points
         translation = self.playerchoice
         if analyze == translation:
-            print('You guessed correct!')
+            print('Nice work!! You guessed correctly and earned 100 pts.')
             self.score += 100
         else:
-            print('You guessed wrong!')
+            print('Oh no. :( You guessed wrong and lost 75 pts.')
             self.score -= 75
 
         print(f'Current score: {self.score}')
