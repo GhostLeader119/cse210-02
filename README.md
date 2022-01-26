@@ -44,3 +44,15 @@ root                    (project root folder)
 =======
 * Craig Conover
 >>>>>>> main
+
+## Team
+Lead: Caden Campbell
+Support: Samuel Hootini
+Support: Craig Conover
+Support: Kira Santos
+
+## Contact Info
+Caden Campbell, Email: cadecamp9@gmail.com
+Support: Samuel Hootini, Email: shootini28@gmail.com
+Support: Craig Conover, Email: cconover2@byui.edu
+Support: Kira Santos, Email: matt.kira15@gmail.com
