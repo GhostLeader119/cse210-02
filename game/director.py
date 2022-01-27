@@ -32,6 +32,12 @@ try:
             Args:
                 self (Director): an instance of Director.
             """
+            
+            print('******** Welcome to Hilo ********')
+            print('This is a fun game of chance. You will be given a card with a number value and your mission is to guess if the next card will be higher or lower in number.\n\nYou will start off with 300 points.\n   - Guess right you earn 100 points.\n   - Guess wrong you loose 75 points.')
+            print('\nHappy Guessing!!')
+            print('*****************************\n')
+            
             while self.is_playing:
 
                 self.get_inputs()
@@ -47,7 +53,7 @@ try:
                 self (Director): An instance of Director.
             """
             while True:
-                draw_card = input("Play? [y/n] ").lower()
+                draw_card = input("Ready to Play? [y/n] ").lower()
                 if draw_card == 'y' or draw_card == 'n':
                     break
                 else:
